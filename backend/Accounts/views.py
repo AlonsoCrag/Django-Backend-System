@@ -11,11 +11,15 @@ import time
 @csrf_exempt
 def Register(request):
     if request.method == 'POST':
-        print("Incoming post request...")
-        req = request.POST
+        # req = request.POST
+        req = eval(request.body.decode('utf-8'))
+        print("Incoming post request...", req)
+        print("Request body Encoded...", request.body.decode('utf-8'))
+        print("Request body Decoded...", request.body.decode('utf-8'))
+        # If sending data through a post request, check if it comes from a form web app (POST) otherwise in (body) and deconde
         HashPass = Hash(req["password"])
         hashed, salt = HashPass.hash_data()
-        UserModel = models.Account(Username=req["username"], Password=str(hashed), Salt=str(salt), Email=req["email"], Genere=req["genere"])
+        UserModel = models.Account(Username=req["username"], Password=str(hashed), Salt=str(salt), Email=req["email"])
         UserModel.save()
     return JsonResponse(request.POST)
 
