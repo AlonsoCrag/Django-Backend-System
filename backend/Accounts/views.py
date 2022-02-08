@@ -43,4 +43,4 @@ def Login(request):
 
 def Test(request):
     time.sleep(5)
-    return HttpResponse('Succesfully tested')
+    return HttpResponse('Django is working!')
