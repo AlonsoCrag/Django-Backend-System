@@ -42,5 +42,5 @@ def Login(request):
 
 
 def Test(request):
-    time.sleep(5)
-    return HttpResponse('Django is working!')
+    # time.sleep(5)
+    return HttpResponse('REST API - Mobile Application - 2022')
