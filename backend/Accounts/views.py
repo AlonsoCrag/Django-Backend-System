@@ -7,20 +7,41 @@ from . import models
 from Hasher.HashPass import Hash, HashWithSalt
 from Serializer.serializer import SerializeData
 import time
+from PIL import Image
+from django.core.files.base import ContentFile
+from django.core.files import File
+from io import BytesIO
+from django.core.files.base import ContentFile
+from django.core.files import File
+from io import BytesIO
 
 @csrf_exempt
 def Register(request):
     if request.method == 'POST':
         # req = request.POST
-        req = eval(request.body.decode('utf-8'))
-        print("Incoming post request...", req)
-        print("Request body Encoded...", request.body.decode('utf-8'))
-        print("Request body Decoded...", request.body.decode('utf-8'))
+        print(request.POST, request.FILES)
+        # req = eval(request.body.decode('utf-8'))
+        req = request.POST
+        # print("Incoming post request...", req)
+        # print("Request body Encoded...", request.body.decode('utf-8'))
+        # print("Request body Decoded...", request.body.decode('utf-8'))
         # If sending data through a post request, check if it comes from a form web app (POST) otherwise in (body) and deconde
         HashPass = Hash(req["password"])
         hashed, salt = HashPass.hash_data()
-        UserModel = models.Account(Username=req["username"], Password=str(hashed), Salt=str(salt), Email=req["email"])
+        print("Picture ->", request.FILES["picture"])
+        print("Picture.FILE->", request.FILES["picture"].file)
+        print("Picture.BUFFER ->", request.FILES["picture"].file.getbuffer())
+        # print("Picture ->", request.FILES["picture"].file.read())
+        # DATA = request.FILES["picture"].file.read()
+        # DATA.seek(0)
+        output = BytesIO(request.FILES["picture"].file.getbuffer())
+        output.seek(0)
+        content = ContentFile(output.read())
+        _file = File(content)
+        request.FILES["picture"].file = _file
+        UserModel = models.Account(Username=req["username"], Password=str(hashed), Salt=str(salt), Email=req["email"], Picture=request.FILES["picture"])
         UserModel.save()
+        return HttpResponse("TESTING THE REGISTER ROUTE")
     return JsonResponse(request.POST)
 
 
@@ -44,3 +65,5 @@ def Login(request):
 def Test(request):
     # time.sleep(5)
     return HttpResponse('REST API - Mobile Application - 2022')
+
+

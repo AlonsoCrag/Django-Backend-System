@@ -6,4 +6,3 @@ class ViewAccounts(admin.ModelAdmin):
 
 # Register your models here.
 admin.site.register(models.Account, ViewAccounts)
-admin.site.register(models.Employ)

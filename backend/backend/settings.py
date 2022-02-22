@@ -28,13 +28,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.getenv("DJANGO_SECRET_KEY", get_random_secret_key())
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['localhost']
+ALLOWED_HOSTS = ['localhost', '64.227.25.226', 'decrag.xyz', 'www.decrag.xyz']
+
 
 DEVELOPMENT_MODE = os.getenv("DEVELOPMENT_MODE", "False") == "True"
 
-# Application definition
+# Application definition,
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -44,10 +45,21 @@ INSTALLED_APPS = [
     'corsheaders',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'Testing.apps.TestingConfig',
     'Accounts.apps.AccountsConfig',
+    'Clients.apps.ClientsConfig',
     'rest_framework',
+    'graphene_django',
+    'tailwind',
+    'theme'
 ]
+
+TAILWIND_APP_NAME = 'theme'
+
+INTERNAL_IPS = [
+    '127.0.0.1',
+]
+
+NPM_BIN_PATH='C:/Program Files/nodejs/npm.cmd'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -97,12 +109,12 @@ if DEVELOPMENT_MODE is True:
 elif len(sys.argv) > 0 and sys.argv[1] != 'collectstatic':
     DATABASES = {
        'default': {
-            'ENGINE': os.getenv("ENGINE"),
-            'NAME': os.getenv("NAME"),
-            'USER': os.getenv("USER"),
-            'PASSWORD': os.getenv("PASSWORD"),
-            'HOST': os.getenv("HOST"),
-            'PORT': os.getenv("PORT"),
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'NAME': 'intelred_db',
+            'USER': 'doadmin',
+            'PASSWORD': 'SA8bxaTrgyaWCmd5',
+            'HOST': 'db-postgress-do-user-10336267-0.b.db.ondigitalocean.com',
+            'PORT': 25060,
         }
     }
 
@@ -144,6 +156,9 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = '/var/cache/int_serv/static/'
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR  / 'media'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
