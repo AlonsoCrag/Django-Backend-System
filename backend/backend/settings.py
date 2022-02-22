@@ -109,12 +109,12 @@ if DEVELOPMENT_MODE is True:
 elif len(sys.argv) > 0 and sys.argv[1] != 'collectstatic':
     DATABASES = {
        'default': {
-            'ENGINE': 'django.db.backends.postgresql_psycopg2',
-            'NAME': 'intelred_db',
-            'USER': 'doadmin',
-            'PASSWORD': 'SA8bxaTrgyaWCmd5',
-            'HOST': 'db-postgress-do-user-10336267-0.b.db.ondigitalocean.com',
-            'PORT': 25060,
+            'ENGINE': '',
+            'NAME': '',
+            'USER': '',
+            'PASSWORD': '',
+            'HOST': '',
+            'PORT': ,
         }
     }
 
