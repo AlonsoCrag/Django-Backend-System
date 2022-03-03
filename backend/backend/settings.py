@@ -30,7 +30,7 @@ SECRET_KEY = os.getenv("DJANGO_SECRET_KEY", get_random_secret_key())
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['localhost', '64.227.25.226', 'decrag.xyz', 'www.decrag.xyz']
+ALLOWED_HOSTS = ['localhost', '64.227.25.226', 'decrag.xyz', 'www.decrag.xyz', '10.0.2.2']
 
 
 DEVELOPMENT_MODE = os.getenv("DEVELOPMENT_MODE", "False") == "True"
@@ -50,7 +50,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'graphene_django',
     'tailwind',
-    'theme'
+    'Delete.apps.DeleteConfig',
 ]
 
 TAILWIND_APP_NAME = 'theme'
@@ -109,14 +109,15 @@ if DEVELOPMENT_MODE is True:
 elif len(sys.argv) > 0 and sys.argv[1] != 'collectstatic':
     DATABASES = {
        'default': {
-            'ENGINE': '',
-            'NAME': '',
-            'USER': '',
-            'PASSWORD': '',
-            'HOST': '',
-            'PORT': ,
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'NAME': 'intelred',
+            'USER': 'doadmin',
+            'PASSWORD': 'SA8bxaTrgyaWCmd5',
+            'HOST': 'db-postgress-do-user-10336267-0.b.db.ondigitalocean.com',
+            'PORT': 25060,
         }
     }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
@@ -164,3 +165,47 @@ MEDIA_ROOT = BASE_DIR  / 'media'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+LOGGING = {
+    'version': 1,
+    # Version of logging
+    'disable_existing_loggers': False,
+ 
+    'formatters':{
+        'Simple_Format':{
+            'format': 'Level: {levelname},  {message}',
+            'style': '{',
+        }
+    },
+ 
+    'handlers': {
+        'file': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename': './logs/log_file1.log',
+            'formatter': 'Simple_Format',
+        },
+ 
+        'console': {
+            'class': 'logging.StreamHandler',
+            'level': 'INFO',
+            'formatter': 'Simple_Format'
+        },
+    },
+
+    'root': {
+        'handlers': ['console'],
+        'level': 'INFO'
+    },
+ 
+    'loggers': {
+        'django': {
+            'handlers': ['file', 'console'],
+            'level': 'INFO',
+        },
+        'django.server': {
+            'handlers': ['console'],
+            'level': "INFO"
+        }
+    },
+}

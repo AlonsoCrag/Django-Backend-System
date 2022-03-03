@@ -14,9 +14,14 @@ from io import BytesIO
 from django.core.files.base import ContentFile
 from django.core.files import File
 from io import BytesIO
+#
+import logging
+
+logger = logging.getLogger(__name__)
 
 @csrf_exempt
 def Register(request):
+    logger.debug(f"Request POST  data: {request.POST}, {request.FILES}")
     if request.method == 'POST':
         # req = request.POST
         print(request.POST, request.FILES)
@@ -64,6 +69,8 @@ def Login(request):
 
 def Test(request):
     # time.sleep(5)
+    logger.debug("---------------- > Logger is working in a django route < --------------")
+    logging.info("This is a message to test")
     return HttpResponse('REST API - Mobile Application - 2022')
 
 

@@ -1,0 +1,200 @@
+Level: INFO,  Watching for file changes with StatReloader
+Level: INFO,  "GET / HTTP/1.1" 200 36
+Level: INFO,  C:\Users\Alonso\Desktop\intelred-ba\backend\backend\settings.py changed, reloading.
+Level: INFO,  Watching for file changes with StatReloader
+Level: INFO,  "GET / HTTP/1.1" 200 36
+Level: INFO,  Watching for file changes with StatReloader
+Level: INFO,  "GET / HTTP/1.1" 200 36
+Level: INFO,  C:\Users\Alonso\Desktop\intelred-ba\backend\backend\settings.py changed, reloading.
+Level: INFO,  Watching for file changes with StatReloader
+Level: ERROR,  Internal Server Error: /api/v1/delete/elmer@gmail.com/
+Traceback (most recent call last):
+  File "C:\Users\Alonso\Desktop\enviroment\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Alonso\Desktop\enviroment\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Alonso\Desktop\intelred-ba\backend\Delete\views.py", line 7, in DeleteClient
+    User = Account.objects.get(Email=str(email))
+  File "C:\Users\Alonso\Desktop\enviroment\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Alonso\Desktop\enviroment\lib\site-packages\django\db\models\query.py", line 435, in get
+    raise self.model.DoesNotExist(
+Accounts.models.Account.DoesNotExist: Account matching query does not exist.
+Level: ERROR,  Internal Server Error: /api/v1/delete/elmer@gmail.com/
+Traceback (most recent call last):
+  File "C:\Users\Alonso\Desktop\enviroment\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Alonso\Desktop\enviroment\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Alonso\Desktop\intelred-ba\backend\Delete\views.py", line 7, in DeleteClient
+    User = Account.objects.get(Email=str(email))
+  File "C:\Users\Alonso\Desktop\enviroment\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Alonso\Desktop\enviroment\lib\site-packages\django\db\models\query.py", line 435, in get
+    raise self.model.DoesNotExist(
+Accounts.models.Account.DoesNotExist: Account matching query does not exist.
+Level: INFO,  C:\Users\Alonso\Desktop\intelred-ba\backend\Delete\views.py changed, reloading.
+Level: INFO,  Watching for file changes with StatReloader
+Level: ERROR,  Internal Server Error: /api/v1/delete/elmer@gmail.com/
+Traceback (most recent call last):
+  File "C:\Users\Alonso\Desktop\enviroment\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Alonso\Desktop\enviroment\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Alonso\Desktop\intelred-ba\backend\Delete\views.py", line 7, in DeleteClient
+    User = Account.objects.get(Email=email)
+  File "C:\Users\Alonso\Desktop\enviroment\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Alonso\Desktop\enviroment\lib\site-packages\django\db\models\query.py", line 435, in get
+    raise self.model.DoesNotExist(
+Accounts.models.Account.DoesNotExist: Account matching query does not exist.
+Level: INFO,  C:\Users\Alonso\Desktop\intelred-ba\backend\Delete\views.py changed, reloading.
+Level: INFO,  Watching for file changes with StatReloader
+Level: ERROR,  Internal Server Error: /api/v1/delete/elmer@gmail.com/
+Traceback (most recent call last):
+  File "C:\Users\Alonso\Desktop\enviroment\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Alonso\Desktop\enviroment\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Alonso\Desktop\intelred-ba\backend\Delete\views.py", line 7, in DeleteClient
+    User = Account.objects.get(Username="Elmer")
+  File "C:\Users\Alonso\Desktop\enviroment\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Alonso\Desktop\enviroment\lib\site-packages\django\db\models\query.py", line 439, in get
+    raise self.model.MultipleObjectsReturned(
+Accounts.models.Account.MultipleObjectsReturned: get() returned more than one Account -- it returned 3!
+Level: INFO,  C:\Users\Alonso\Desktop\intelred-ba\backend\Delete\views.py changed, reloading.
+Level: INFO,  Watching for file changes with StatReloader
+Level: INFO,  C:\Users\Alonso\Desktop\intelred-ba\backend\backend\settings.py changed, reloading.
+Level: INFO,  Watching for file changes with StatReloader
+Level: INFO,  Watching for file changes with StatReloader
+Level: INFO,  Watching for file changes with StatReloader
+Level: INFO,  C:\Users\Alonso\Desktop\intelred-ba\backend\Delete\views.py changed, reloading.
+Level: INFO,  Watching for file changes with StatReloader
+Level: INFO,  C:\Users\Alonso\Desktop\intelred-ba\backend\Delete\views.py changed, reloading.
+Level: INFO,  Watching for file changes with StatReloader
+Level: INFO,  C:\Users\Alonso\Desktop\intelred-ba\backend\Delete\views.py changed, reloading.
+Level: INFO,  Watching for file changes with StatReloader
+Level: INFO,  C:\Users\Alonso\Desktop\intelred-ba\backend\backend\settings.py changed, reloading.
+Level: INFO,  Watching for file changes with StatReloader
+Level: INFO,  C:\Users\Alonso\Desktop\intelred-ba\backend\backend\settings.py changed, reloading.
+Level: INFO,  Watching for file changes with StatReloader
+Level: INFO,  C:\Users\Alonso\Desktop\intelred-ba\backend\backend\settings.py changed, reloading.
+Level: INFO,  Watching for file changes with StatReloader
+Level: INFO,  C:\Users\Alonso\Desktop\intelred-ba\backend\Delete\views.py changed, reloading.
+Level: INFO,  Watching for file changes with StatReloader
+Level: INFO,  C:\Users\Alonso\Desktop\intelred-ba\backend\Delete\views.py changed, reloading.
+Level: INFO,  Watching for file changes with StatReloader
+Level: INFO,  Watching for file changes with StatReloader
+Level: WARNING,  Session data corrupted
+Level: WARNING,  Session data corrupted
+Level: WARNING,  Session data corrupted
+Level: WARNING,  Session data corrupted
+Level: WARNING,  Not Found: /static/admin/css/base.css
+Level: WARNING,  Not Found: /static/admin/css/nav_sidebar.css
+Level: WARNING,  Not Found: /static/admin/js/nav_sidebar.js
+Level: WARNING,  Not Found: /static/admin/css/login.css
+Level: WARNING,  Not Found: /static/admin/css/responsive.css
+Level: INFO,  C:\Users\Alonso\Desktop\intelred-ba\backend\backend\settings.py changed, reloading.
+Level: INFO,  Watching for file changes with StatReloader
+Level: WARNING,  Session data corrupted
+Level: WARNING,  Session data corrupted
+Level: ERROR,  Internal Server Error: /api/v1/delete/elmer@gmail.com/
+Traceback (most recent call last):
+  File "C:\Users\Alonso\Desktop\enviroment\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Alonso\Desktop\enviroment\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Alonso\Desktop\intelred-ba\backend\Delete\views.py", line 11, in DeleteClient
+    User = Account.objects.get(Username="Elmer")
+  File "C:\Users\Alonso\Desktop\enviroment\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Alonso\Desktop\enviroment\lib\site-packages\django\db\models\query.py", line 439, in get
+    raise self.model.MultipleObjectsReturned(
+Accounts.models.Account.MultipleObjectsReturned: get() returned more than one Account -- it returned 3!
+Level: ERROR,  Internal Server Error: /api/v1/delete/a@gmail.com/
+Traceback (most recent call last):
+  File "C:\Users\Alonso\Desktop\enviroment\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Alonso\Desktop\enviroment\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Alonso\Desktop\intelred-ba\backend\Delete\views.py", line 11, in DeleteClient
+    User = Account.objects.get(Username="Elmer")
+  File "C:\Users\Alonso\Desktop\enviroment\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Alonso\Desktop\enviroment\lib\site-packages\django\db\models\query.py", line 439, in get
+    raise self.model.MultipleObjectsReturned(
+Accounts.models.Account.MultipleObjectsReturned: get() returned more than one Account -- it returned 3!
+Level: INFO,  C:\Users\Alonso\Desktop\intelred-ba\backend\Delete\views.py changed, reloading.
+Level: INFO,  Watching for file changes with StatReloader
+Level: WARNING,  Session data corrupted
+Level: WARNING,  Session data corrupted
+Level: WARNING,  Session data corrupted
+Level: WARNING,  Not Found: /media/pictures/image_rndhO3l.jpg
+Level: ERROR,  Internal Server Error: /api/v1/delete/a@gmail.com/
+Traceback (most recent call last):
+  File "C:\Users\Alonso\Desktop\enviroment\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Alonso\Desktop\enviroment\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Alonso\Desktop\intelred-ba\backend\Delete\views.py", line 11, in DeleteClient
+    User = Account.objects.get(Username="Alonso")
+  File "C:\Users\Alonso\Desktop\enviroment\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Alonso\Desktop\enviroment\lib\site-packages\django\db\models\query.py", line 439, in get
+    raise self.model.MultipleObjectsReturned(
+Accounts.models.Account.MultipleObjectsReturned: get() returned more than one Account -- it returned 2!
+Level: INFO,  C:\Users\Alonso\Desktop\intelred-ba\backend\Delete\views.py changed, reloading.
+Level: INFO,  Watching for file changes with StatReloader
+Level: INFO,  Watching for file changes with StatReloader
+Level: INFO,  C:\Users\Alonso\Desktop\intelred-ba\backend\Delete\views.py changed, reloading.
+Level: INFO,  Watching for file changes with StatReloader
+Level: INFO,  C:\Users\Alonso\Desktop\intelred-ba\backend\Delete\views.py changed, reloading.
+Level: INFO,  Watching for file changes with StatReloader
+Level: WARNING,  Session data corrupted
+Level: ERROR,  Internal Server Error: /api/v1/delete/a@gmail.com/
+Traceback (most recent call last):
+  File "C:\Users\Alonso\Desktop\enviroment\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Alonso\Desktop\enviroment\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Alonso\Desktop\intelred-ba\backend\Delete\views.py", line 11, in DeleteClient
+    User = Account.objects.get(Username="Alghonso")
+  File "C:\Users\Alonso\Desktop\enviroment\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Alonso\Desktop\enviroment\lib\site-packages\django\db\models\query.py", line 435, in get
+    raise self.model.DoesNotExist(
+Accounts.models.Account.DoesNotExist: Account matching query does not exist.
+Level: INFO,  C:\Users\Alonso\Desktop\intelred-ba\backend\Delete\views.py changed, reloading.
+Level: INFO,  Watching for file changes with StatReloader
+Level: INFO,  C:\Users\Alonso\Desktop\intelred-ba\backend\Delete\views.py changed, reloading.
+Level: INFO,  Watching for file changes with StatReloader
+Level: INFO,  C:\Users\Alonso\Desktop\intelred-ba\backend\Delete\views.py changed, reloading.
+Level: INFO,  Watching for file changes with StatReloader
+Level: INFO,  C:\Users\Alonso\Desktop\intelred-ba\backend\Delete\views.py changed, reloading.
+Level: INFO,  Watching for file changes with StatReloader
+Level: INFO,  Watching for file changes with StatReloader
+Level: INFO,  C:\Users\Alonso\Desktop\intelred-ba\backend\Delete\views.py changed, reloading.
+Level: INFO,  Watching for file changes with StatReloader
+Level: WARNING,  Session data corrupted
+Level: WARNING,  Session data corrupted
+Level: WARNING,  Session data corrupted
+Level: ERROR,  Internal Server Error: /api/v1/delete/chochis@gmail.com/
+Traceback (most recent call last):
+  File "C:\Users\Alonso\Desktop\enviroment\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Alonso\Desktop\enviroment\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Alonso\Desktop\intelred-ba\backend\Delete\views.py", line 18, in DeleteClient
+    Account.objects.delete(Email=email)
+AttributeError: 'Manager' object has no attribute 'delete'
+Level: INFO,  C:\Users\Alonso\Desktop\intelred-ba\backend\Delete\views.py changed, reloading.
+Level: INFO,  Watching for file changes with StatReloader
+Level: WARNING,  Session data corrupted
+Level: WARNING,  Session data corrupted
+Level: WARNING,  Session data corrupted
+Level: INFO,  C:\Users\Alonso\Desktop\intelred-ba\backend\Delete\views.py changed, reloading.
+Level: INFO,  Watching for file changes with StatReloader
+Level: WARNING,  Session data corrupted
+Level: WARNING,  Session data corrupted
+Level: WARNING,  Session data corrupted
